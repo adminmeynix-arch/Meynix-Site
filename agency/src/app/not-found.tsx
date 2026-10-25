@@ -1,0 +1,1 @@
+export default function NotFound(){return <section className="page-intro"><span className="eyebrow">404 / PAGE NOT FOUND</span><h1>A small detour.</h1><p>That page isn’t here. Let’s get you back to something useful.</p><a className="button" href="/">Back to home ↗</a></section>}
