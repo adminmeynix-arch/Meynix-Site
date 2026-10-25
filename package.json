@@ -1,11 +1,14 @@
 {
   "name": "meynix-workspace",
   "private": true,
+  "workspaces": [
+    "agency"
+  ],
   "scripts": {
     "dev": "npm --prefix agency run dev",
     "build": "npm --prefix agency run build",
     "lint": "npm --prefix agency run lint",
     "typecheck": "npm --prefix agency run typecheck",
-    "setup": "npm --prefix agency ci"
+    "setup": "npm --prefix agency install"
   }
 }
