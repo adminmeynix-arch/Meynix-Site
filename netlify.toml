@@ -1,5 +1,4 @@
 [build]
-  base = "agency"
   command = "npm run build"
   publish = "out"
 
