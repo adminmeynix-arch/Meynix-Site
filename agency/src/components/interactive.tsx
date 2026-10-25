@@ -421,24 +421,28 @@ export function ContactForm() {
 
   const cleanPhone = site.whatsapp ? site.whatsapp.replace(/\D/g, '') : '919360239398';
 
-  const formattedQuotationText = `📋 *MEYNIX PROJECT QUOTATION INQUIRY*
+  const formattedQuotationText = `*MEYNIX PROJECT QUOTATION INQUIRY*
+----------------------------------------
 *Quotation Ref:* #${quoteRef || 'MYX-QT-PENDING'}
 *Date:* ${quoteDate || 'Current'}
 
-👤 *Client Name:* ${formData.name || 'Not provided'}
-🏢 *Company / Business:* ${formData.business || 'Individual / Private Client'}
-📞 *Phone / WhatsApp:* ${formData.phone || 'Not provided'}
-✉️ *Email:* ${formData.email || 'Not provided'}
+*CLIENT INFORMATION*
+• Client Name: ${formData.name || 'Not provided'}
+• Company / Business: ${formData.business || 'Individual / Private Client'}
+• Phone / WhatsApp: ${formData.phone || 'Not provided'}
+• Email: ${formData.email || 'Not provided'}
 
-🎯 *Target Solution:* ${formData.solution}
-💰 *Estimated Budget:* ${formData.budget || 'Flexible / Scoped on Discovery'}
-⚡ *Preferred Contact Channel:* ${formData.contactMethod}
+*PROJECT SPECIFICATION*
+• Target Solution: ${formData.solution}
+• Estimated Budget: ${formData.budget || 'Flexible / Scoped on Discovery'}
+• Preferred Contact Channel: ${formData.contactMethod}
 
-📝 *Project Scope & Workflows to Solve:*
+*PROJECT SCOPE & WORKFLOWS TO SOLVE*
 ${formData.description}
 
 ----------------------------------------
-_Generated via Meynix Official Quotation System. Please reply with project feasibility, cost range & estimated timeline._`;
+_Generated via Meynix Official Quotation System._
+_Please confirm feasibility, cost estimation & next implementation steps._`;
 
   const whatsappQuoteUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(formattedQuotationText)}`;
   const mailtoQuoteUrl = `mailto:${site.email || 'meynix.official@gmail.com'}?subject=${encodeURIComponent(
